@@ -4,4 +4,10 @@
 	<remote  name="github" 
 			 fetch="https://github.com/" />
 
+
+	<default revision="refs/tags/sdrangel-0.0.0_r0"
+           	 remote="aosp"
+             sync-j="4" 
+             sync-c="true" />
+
 </manifest>
