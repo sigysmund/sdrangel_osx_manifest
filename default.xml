@@ -4,10 +4,91 @@
 	<remote  name="github" 
 			 fetch="https://github.com/" />
 
+    <remote  name="github-access" 
+			 fetch="ssh://git@github.com/" />
 
-	<default revision="refs/tags/sdrangel-0.0.0_r0"
-           	 remote="aosp"
+	<default revision="master"
+           	 remote="github"
              sync-j="4" 
              sync-c="true" />
+
+    <project path="base/sdrangel"
+    		 name="f4exb/sdrangel.git" remote="github" />
+
+    <!-- 
+    	Dependencies 
+    -->
+    <project path="lib/cm256cc"
+    		 name="f4exb/cm256cc.git" remote="github" />
+
+    <!-- checkout if needed?: e2d84c1 -->
+    <project path="lib/mbelib"
+    		 name="szechyjs/mbelib.git" remote="github" />
+
+    <project path="lib/serialDV"
+    		 name="f4exb/serialDV.git" remote="github" />
+
+    <project path="lib/dsdcc"
+    		 name="f4exb/dsdcc.git" remote="github" />
+
+    <project path="lib/codec2"
+    		 name="drowe67/codec2.git" remote="github" />
+
+    <!-- 
+    	Hardware Driver Dependencies 
+    -->
+    <!-- checkout if needed?: 5c86e53 -->
+    <project path="hardware/libairspy"
+    		 name="airspy/host.git" remote="github" />
+
+    <!-- checkout if needed?: 075b8f9 -->
+    <project path="hardware/libairspyhf"
+    		 name="airspy/airspyhf.git" remote="github" />
+
+    <project path="hardware/libmirisdr"
+    		 name="f4exb/libmirisdr-4.git" remote="github" />
+
+    <!-- checkout if needed?: c7d970a -->
+    <project path="hardware/librtlsdr"
+    		 name="librtlsdr/librtlsdr.git" remote="github" />
+
+	<!-- checkout if needed?: 5bdc242 (v0.17) -->
+    <project path="hardware/libiio"
+    		 name="analogdevicesinc/libiio.git" remote="github" />
+
+    <!-- checkout if needed?: 32058c4 -->
+    <project path="hardware/libbladeRF"
+    		 name="Nuand/bladeRF.git" remote="github" />
+
+    <!-- checkout if needed?: 9bbbbbf -->		 
+    <project path="hardware/libhackrf"
+    		 name="mossmann/hackrf.git" remote="github" />
+
+    <!-- checkout if needed?: 59d51d5 -->
+    <project path="hardware/LimeSuite"
+    		 name="myriadrf/LimeSuite.git" remote="github" />
+
+    <project path="hardware/libperseus"
+    		 name="f4exb/libperseus-sdr.git" remote="github" />
+
+    <!-- checkout if needed?: 053ec82 -->
+    <!-- Repository has submodules -->
+    <project path="hardware/xtrx-images"
+    		 name="xtrx-sdr/images.git" remote="github" />
+
+    <!-- checkout if needed?: 6d21756 -->		 
+    <project path="hardware/SoapySDR"
+    		 name="pothosware/SoapySDR.git" remote="github" />
+
+    <project path="hardware/SoapyRTLSDR"
+    		 name="pothosware/SoapyRTLSDR.git" remote="github" />
+
+    <project path="hardware/SoapyHackRF"
+    		 name="pothosware/SoapyHackRF.git" remote="github" />
+
+    <project path="hardware/SoapyRemote"
+    		 name="pothosware/SoapyRemote.git" remote="github" />
+
+    <!-- Download: SDRplay_RSP_API-MacOSX-2.13.2.pkg -->
 
 </manifest>
