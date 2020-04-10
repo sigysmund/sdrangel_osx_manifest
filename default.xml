@@ -19,66 +19,56 @@
     	Dependencies 
     -->
     <project path="base/lib/cm256cc"
-             name="f4exb/cm256cc.git" remote="github"/>
+             name="f4exb/cm256cc.git" remote="github" revision="f21e8bc1e9afdb0b28672743dcec111aec1d32d9"/>
 
-    <!-- checkout if needed?: e2d84c1 -->
     <project path="base/lib/mbelib"
-             name="szechyjs/mbelib.git" remote="github"/>
+             name="szechyjs/mbelib.git" remote="github" revision="9a04ed5c78176a9965f3d43f7aa1b1f5330e771f"/>
 
     <project path="base/lib/serialDV"
-             name="f4exb/serialDV.git" remote="github"/>
+             name="f4exb/serialDV.git" remote="github" revision="v1.1.4"/>
 
     <project path="base/lib/dsdcc"
-             name="f4exb/dsdcc.git" remote="github"/>
+             name="f4exb/dsdcc.git" remote="github" revision="v1.8.6"/>
 
     <project path="base/lib/codec2"
-             name="drowe67/codec2.git" remote="github"/>
+             name="drowe67/codec2.git" remote="github" revision="76a20416d715ee06f8b36a9953506876689a3bd2"/>
 
     <!-- 
     	Hardware Driver Dependencies 
     -->
-    <!-- checkout if needed?: 5c86e53 -->
     <project path="hardware/libairspy"
-             name="airspy/host.git" remote="github"/>
+             name="airspy/host.git" remote="github" revision="bfb667080936ca5c2d23b3282f5893931ec38d3f"/>
 
-    <!-- checkout if needed?: 075b8f9 -->
     <project path="hardware/libairspyhf"
-             name="airspy/airspyhf.git" remote="github"/>
+             name="airspy/airspyhf.git" remote="github" revision="1.1.5"/>
 
     <project path="hardware/libmirisdr"
              name="f4exb/libmirisdr-4.git" remote="github"/>
 
-    <!-- checkout if needed?: c7d970a -->
     <project path="hardware/librtlsdr"
-             name="librtlsdr/librtlsdr.git" remote="github"/>
+             name="osmocom/rtl-sdr.git" remote="github" revision="be1d1206bfb6e6c41f7d91b20b77e20f929fa6a7"/>
 
-    <!-- checkout if needed?: 5bdc242 (v0.17) -->
     <project path="hardware/libiio"
-             name="analogdevicesinc/libiio.git" remote="github"/>
+             name="analogdevicesinc/libiio.git" remote="github" revision="826563e41b5ce9890b75506f672017de8d76d52d"/>
 
-    <!-- checkout if needed?: 32058c4 -->
     <project path="hardware/libbladeRF"
-             name="Nuand/bladeRF.git" remote="github"/>
+             name="Nuand/bladeRF.git" remote="github" revision="2019.07"/>
 
-    <!-- checkout if needed?: 9bbbbbf -->
     <project path="hardware/libhackrf"
-             name="mossmann/hackrf.git" remote="github"/>
+             name="mossmann/hackrf.git" remote="github" revision="v2018.01.1"/>
 
-    <!-- checkout if needed?: 59d51d5 -->
     <project path="hardware/LimeSuite"
-             name="myriadrf/LimeSuite.git" remote="github"/>
+             name="myriadrf/LimeSuite.git" remote="github" revision="v20.01.0"/>
 
     <project path="hardware/libperseus"
-             name="f4exb/libperseus-sdr.git" remote="github"/>
+             name="f4exb/libperseus-sdr.git" remote="github" revision="afefa23e3140ac79d845acb68cf0beeb86d09028"/>
 
-    <!-- checkout if needed?: 053ec82 -->
     <!-- Repository has submodules -->
     <project path="hardware/xtrx-images"
-             name="xtrx-sdr/images.git" remote="github"/>
+             name="xtrx-sdr/images.git" remote="github" revision="053ec82"/>
 
-    <!-- checkout if needed?: 6d21756 -->
     <project path="hardware/SoapySDR"
-             name="pothosware/SoapySDR.git" remote="github"/>
+             name="pothosware/SoapySDR.git" remote="github" revision="soapy-sdr-0.7.1"/>
 
     <project path="hardware/SoapyRTLSDR"
              name="pothosware/SoapyRTLSDR.git" remote="github"/>
@@ -87,14 +77,14 @@
              name="pothosware/SoapyHackRF.git" remote="github"/>
 
     <project path="hardware/SoapyRemote"
-             name="pothosware/SoapyRemote.git" remote="github"/>
+             name="pothosware/SoapyRemote.git" remote="github" revision="soapy-remote-0.5.1"/>
 
     <!-- Download: SDRplay_RSP_API-MacOSX-2.13.2.pkg -->
 
     <!--
         Dependencies
     -->
-    <copyfile src="https://github.com/boostorg/boost/archive/boost-1.69.0.tar.gz"
-              dest="lib/boost-1.69.0/boost-1.69.0.tar.gz"/>
+    <copyfile src="https://github.com/boostorg/boost/archive/boost-1.72.0.tar.gz"
+              dest="lib/boost-1.72.0/boost-1.72.0.tar.gz"/>
 
 </manifest>
