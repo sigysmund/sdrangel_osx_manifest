@@ -9,28 +9,28 @@
 
     <default revision="master"
              remote="github"
-             sync-j="4"
+             sync-j="8"
              sync-c="true"/>
 
-    <project path="base/sdrangel"
+    <project path="sdrangel"
              name="sigysmund/sdrangel.git" remote="github" revision="osx"/>
 
     <!-- 
     	Dependencies 
     -->
-    <project path="base/lib/cm256cc"
+    <project path="lib/cm256cc"
              name="f4exb/cm256cc.git" remote="github" revision="f21e8bc1e9afdb0b28672743dcec111aec1d32d9"/>
 
-    <project path="base/lib/mbelib"
+    <project path="lib/mbelib"
              name="szechyjs/mbelib.git" remote="github" revision="9a04ed5c78176a9965f3d43f7aa1b1f5330e771f"/>
 
-    <project path="base/lib/serialDV"
+    <project path="lib/serialDV"
              name="f4exb/serialDV.git" remote="github" revision="1cac0583b8594fd8d657fc149070aeb20f90b4a8"/>
 
-    <project path="base/lib/dsdcc"
+    <project path="lib/dsdcc"
              name="f4exb/dsdcc.git" remote="github" revision="b8ecee6c00a45c1ce6cf7fa51d6cc433d6e88948"/>
 
-    <project path="base/lib/codec2"
+    <project path="lib/codec2"
              name="drowe67/codec2.git" remote="github" revision="76a20416d715ee06f8b36a9953506876689a3bd2"/>
 
     <!-- 
@@ -84,7 +84,11 @@
     <!--
         Dependencies
     -->
+    <!--
     <copyfile src="https://github.com/boostorg/boost/archive/boost-1.72.0.tar.gz"
-              dest="lib/boost-1.72.0/boost-1.72.0.tar.gz"/>
+              dest="deps/boost-1.72.0/boost-1.72.0.tar.gz"/>
+    -->
+    <copyfile src="http://fftw.org/fftw-3.3.8.tar.gz"
+              dest="deps/fftw-3.3.8.tar.gz"/>          
 
 </manifest>
