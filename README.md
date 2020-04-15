@@ -50,10 +50,15 @@ brew install speexdsp libsamplerate codec2
 ```
 
 ## Build Hardware dependencies which you own
-RTL-SDR
+### RTL-SDR
 Build like in WiKi 
-HackRF
+### HackRF
 Build like in WiKi 
-LimeSDR
+### LimeSDR
 Build like in WiKi 
-** Open IDE(QtCreator) and try to build SDRangel...
+
+## To build or develop
+```
+Open IDE(QtCreator - Used in this case) and open SDRangel source dir
+Hopefully CMake will set-up the project, otherwise some dependecies or paths are missing or being not properly prefixed.
+```
