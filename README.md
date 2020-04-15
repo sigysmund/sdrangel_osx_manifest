@@ -27,14 +27,7 @@ brew install boost
 
 ### FFTW3
 ```
-curl -OL http://fftw.org/fftw-3.3.8.tar.gz
-tar -xf fftw-3.3.8.tar.gz && cd fftw-3.3.8
-./configure \
-  --enable-threads \
-  --enable-float \
-  --enable-sse \
-  --enable-sse2
-make -j16 && sudo make install
+brew install fftw
 ```
 
 ### OpenCV
@@ -43,17 +36,24 @@ brew install opencv
 ```
 
 ## Build Non-hardware dependencies
-CM265cc
-MBElib
-SerialDV
-DSDcc
-Codec2/FreeDV
+### CM265cc
+Build like in WiKi
+### MBElib
+Build like in WiKi
+### SerialDV
+Build like in WiKi
+### DSDcc
+Build like in WiKi 
+### Codec2/FreeDV
+```
+brew install speexdsp libsamplerate codec2
+```
 
 ## Build Hardware dependencies which you own
 RTL-SDR
-
+Build like in WiKi 
 HackRF
-
+Build like in WiKi 
 LimeSDR
-
+Build like in WiKi 
 ** Open IDE(QtCreator) and try to build SDRangel...
