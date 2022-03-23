@@ -18,29 +18,40 @@
     <!-- 
     	Dependencies 
     -->
+    <project path="lib/aptdec"
+             name="srcejon/aptdec.git" remote="github" revision="libaptdec"/>
+
     <project path="lib/cm256cc"
-             name="f4exb/cm256cc.git" remote="github" revision="f21e8bc1e9afdb0b28672743dcec111aec1d32d9"/>
+             name="f4exb/cm256cc.git" remote="github" revision="c0e92b92aca3d1d36c990b642b937c64d363c559"/>
+
+    <project path="lib/dab-cmdline"
+             name="srcejon/dab-cmdline.git" remote="github" revision="msvc"/>
 
     <project path="lib/mbelib"
              name="szechyjs/mbelib.git" remote="github" revision="9a04ed5c78176a9965f3d43f7aa1b1f5330e771f"/>
 
     <project path="lib/serialDV"
-             name="f4exb/serialDV.git" remote="github" revision="1cac0583b8594fd8d657fc149070aeb20f90b4a8"/>
+             name="f4exb/serialDV.git" remote="github" revision="v1.1.4"/>
 
     <project path="lib/dsdcc"
-             name="f4exb/dsdcc.git" remote="github" revision="b8ecee6c00a45c1ce6cf7fa51d6cc433d6e88948"/>
+             name="f4exb/dsdcc.git" remote="github" revision="v1.9.3"/>
 
     <project path="lib/codec2"
              name="drowe67/codec2.git" remote="github" revision="76a20416d715ee06f8b36a9953506876689a3bd2"/>
 
+    <project path="lib/sgp4"
+             name="dnwrnr/sgp4.git" remote="github"/>
+
+    <project path="lib/libsigmf"
+             name="f4exb/libsigmf.git" remote="github" revision="new-namespaces"/>
     <!-- 
     	Hardware Driver Dependencies 
     -->
     <project path="hardware/libairspy"
-             name="airspy/host.git" remote="github" revision="bfb667080936ca5c2d23b3282f5893931ec38d3f"/>
+             name="airspy/host.git" remote="github" revision="v1.0.10"/>
 
     <project path="hardware/libairspyhf"
-             name="airspy/airspyhf.git" remote="github" revision="99b1d38bee9523ad8bc96e13753131e34093b219"/>
+             name="airspy/airspyhf.git" remote="github" revision="1.1.5"/>
 
     <project path="hardware/libmirisdr"
              name="f4exb/libmirisdr-4.git" remote="github"/>
@@ -49,26 +60,29 @@
              name="osmocom/rtl-sdr.git" remote="github" revision="be1d1206bfb6e6c41f7d91b20b77e20f929fa6a7"/>
 
     <project path="hardware/libiio"
-             name="analogdevicesinc/libiio.git" remote="github" revision="826563e41b5ce9890b75506f672017de8d76d52d"/>
+             name="analogdevicesinc/libiio.git" remote="github" revision="v0.21"/>
 
     <project path="hardware/libbladeRF"
-             name="Nuand/bladeRF.git" remote="github" revision="055c7dfb29e4e93f3ccef6f8627f693ef1664eec"/>
+             name="Nuand/bladeRF.git" remote="github" revision="2019.07"/>
 
     <project path="hardware/libhackrf"
-             name="mossmann/hackrf.git" remote="github" revision="cc7f599677e222a19a2ba4336a23e1fb507cf9f6"/>
+             name="mossmann/hackrf.git" remote="github" revision="v2018.01.1"/>
 
     <project path="hardware/LimeSuite"
-             name="myriadrf/LimeSuite.git" remote="github" revision="1c1c202f9a6ae4bb34068b6f3f576f7f8e74c7f1"/>
+             name="myriadrf/LimeSuite.git" remote="github" revision="v20.01.0"/>
 
     <project path="hardware/libperseus"
              name="f4exb/libperseus-sdr.git" remote="github" revision="afefa23e3140ac79d845acb68cf0beeb86d09028"/>
 
+    <project path="hardware/usrp"
+             name="EttusResearch/uhd.git" remote="github"/>
+
     <!-- Repository has submodules -->
     <project path="hardware/xtrx-images"
-             name="xtrx-sdr/images.git" remote="github"/>
+             name="xtrx-sdr/images.git" remote="github" revision="UHD-4.0"/>
 
     <project path="hardware/SoapySDR"
-             name="pothosware/SoapySDR.git" remote="github" revision="cbdcb115239d9747b93184c5cf13bf18a8964d52"/>
+             name="pothosware/SoapySDR.git" remote="github" revision="soapy-sdr-0.7.1"/>
 
     <project path="hardware/SoapyRTLSDR"
              name="pothosware/SoapyRTLSDR.git" remote="github"/>
@@ -77,7 +91,7 @@
              name="pothosware/SoapyHackRF.git" remote="github"/>
 
     <project path="hardware/SoapyRemote"
-             name="pothosware/SoapyRemote.git" remote="github" revision="0a7cb585d3325d8211f2c82705c8783c4129a421"/>
+             name="pothosware/SoapyRemote.git" remote="github" revision="soapy-remote-0.5.1"/>
 
     <!-- Download: SDRplay_RSP_API-MacOSX-2.13.2.pkg -->
 
