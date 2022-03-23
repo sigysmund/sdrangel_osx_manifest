@@ -31,10 +31,10 @@
              name="szechyjs/mbelib.git" remote="github" revision="9a04ed5c78176a9965f3d43f7aa1b1f5330e771f"/>
 
     <project path="lib/serialDV"
-             name="f4exb/serialDV.git" remote="github" revision="v1.1.4"/>
+             name="f4exb/serialDV.git" remote="github" revision="refs/tags/v1.1.4"/>
 
     <project path="lib/dsdcc"
-             name="f4exb/dsdcc.git" remote="github" revision="v1.9.3"/>
+             name="f4exb/dsdcc.git" remote="github" revision="refs/tags/v1.9.3"/>
 
     <project path="lib/codec2"
              name="drowe67/codec2.git" remote="github" revision="76a20416d715ee06f8b36a9953506876689a3bd2"/>
@@ -48,10 +48,10 @@
     	Hardware Driver Dependencies 
     -->
     <project path="hardware/libairspy"
-             name="airspy/host.git" remote="github" revision="v1.0.10"/>
+             name="airspy/host.git" remote="github" revision="refs/tags/v1.0.10"/>
 
     <project path="hardware/libairspyhf"
-             name="airspy/airspyhf.git" remote="github" revision="1.1.5"/>
+             name="airspy/airspyhf.git" remote="github" revision="refs/tags/1.1.5"/>
 
     <project path="hardware/libmirisdr"
              name="f4exb/libmirisdr-4.git" remote="github"/>
@@ -60,29 +60,29 @@
              name="osmocom/rtl-sdr.git" remote="github" revision="be1d1206bfb6e6c41f7d91b20b77e20f929fa6a7"/>
 
     <project path="hardware/libiio"
-             name="analogdevicesinc/libiio.git" remote="github" revision="v0.21"/>
+             name="analogdevicesinc/libiio.git" remote="github" revision="refs/tags/v0.21"/>
 
     <project path="hardware/libbladeRF"
-             name="Nuand/bladeRF.git" remote="github" revision="2019.07"/>
+             name="Nuand/bladeRF.git" remote="github" revision="refs/tags/2019.07"/>
 
     <project path="hardware/libhackrf"
-             name="mossmann/hackrf.git" remote="github" revision="v2018.01.1"/>
+             name="mossmann/hackrf.git" remote="github" revision="refs/tags/v2018.01.1"/>
 
     <project path="hardware/LimeSuite"
-             name="myriadrf/LimeSuite.git" remote="github" revision="v20.01.0"/>
+             name="myriadrf/LimeSuite.git" remote="github" revision="refs/tags/v20.01.0"/>
 
     <project path="hardware/libperseus"
              name="f4exb/libperseus-sdr.git" remote="github" revision="afefa23e3140ac79d845acb68cf0beeb86d09028"/>
 
     <project path="hardware/usrp"
-             name="EttusResearch/uhd.git" remote="github"/>
+             name="EttusResearch/uhd.git" remote="github" revision="UHD-4.0"/>
 
     <!-- Repository has submodules -->
     <project path="hardware/xtrx-images"
-             name="xtrx-sdr/images.git" remote="github" revision="UHD-4.0"/>
+             name="xtrx-sdr/images.git" remote="github"/>
 
     <project path="hardware/SoapySDR"
-             name="pothosware/SoapySDR.git" remote="github" revision="soapy-sdr-0.7.1"/>
+             name="pothosware/SoapySDR.git" remote="github" revision="refs/tags/soapy-sdr-0.7.1"/>
 
     <project path="hardware/SoapyRTLSDR"
              name="pothosware/SoapyRTLSDR.git" remote="github"/>
@@ -91,7 +91,7 @@
              name="pothosware/SoapyHackRF.git" remote="github"/>
 
     <project path="hardware/SoapyRemote"
-             name="pothosware/SoapyRemote.git" remote="github" revision="soapy-remote-0.5.1"/>
+             name="pothosware/SoapyRemote.git" remote="github" revision="refs/tags/soapy-remote-0.5.1"/>
 
     <!-- Download: SDRplay_RSP_API-MacOSX-2.13.2.pkg -->
 
