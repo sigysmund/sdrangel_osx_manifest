@@ -16,7 +16,7 @@ repo init -u https://github.com/sigysmund/sdrangel_osx_manifest.git
 ## Syncronize projects repositories:
 ```
 repo sync
-repo start osx
+repo start --all osx
 ```
 ## Install libraries, if not available:
 
@@ -35,16 +35,7 @@ brew install fftw
 brew install opencv
 ```
 
-## Build Non-hardware dependencies
-### CM265cc
-Build like in WiKi
-### MBElib
-Build like in WiKi
-### SerialDV
-Build like in WiKi
-### DSDcc
-Build like in WiKi 
-### Codec2/FreeDV
+### Build other
 ```
 brew install speexdsp libsamplerate codec2
 ```
