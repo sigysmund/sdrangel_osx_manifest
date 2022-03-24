@@ -60,19 +60,19 @@
              name="osmocom/rtl-sdr.git" remote="github" revision="be1d1206bfb6e6c41f7d91b20b77e20f929fa6a7"/>
 
     <project path="hardware/libiio"
-             name="analogdevicesinc/libiio.git" remote="github" revision="refs/tags/v0.21"/>
+             name="analogdevicesinc/libiio.git" remote="github" revision="refs/tags/v0.23"/>
 
     <project path="hardware/libbladeRF"
              name="Nuand/bladeRF.git" remote="github" revision="refs/tags/2019.07"/>
 
     <project path="hardware/libhackrf"
-             name="mossmann/hackrf.git" remote="github" revision="refs/tags/v2018.01.1"/>
+             name="mossmann/hackrf.git" remote="github" revision="refs/tags/v2021.03.1"/>
 
     <project path="hardware/LimeSuite"
              name="myriadrf/LimeSuite.git" remote="github" revision="refs/tags/v20.01.0"/>
 
     <project path="hardware/libperseus"
-             name="f4exb/libperseus-sdr.git" remote="github" revision="afefa23e3140ac79d845acb68cf0beeb86d09028"/>
+             name="f4exb/libperseus-sdr.git" remote="github" revision="fixes"/>
 
     <project path="hardware/usrp"
              name="EttusResearch/uhd.git" remote="github" revision="UHD-4.0"/>
@@ -104,5 +104,8 @@
     -->
     <copyfile src="http://fftw.org/fftw-3.3.8.tar.gz"
               dest="deps/fftw-3.3.8.tar.gz"/>          
+
+    <copyfile src="https://www.qcustomplot.com/release/2.1.0fixed/QCustomPlot.tar.gz"
+              dest="deps/QCustomPlot-2.1.0.tar.gz"/>
 
 </manifest>
