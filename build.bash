@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export CC="/usr/local/Cellar/gcc/11.2.0_3/bin/x86_64-apple-darwin19-gcc-11"
+export CXX="/usr/local/Cellar/gcc/11.2.0_3/bin/x86_64-apple-darwin19-c++-11"
+
 # Put in SDRangel/ inited repo dir and execute it
 
 set -e
@@ -14,31 +17,36 @@ cd lib
 
 # APT
 cd aptdec; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/aptdec" ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/aptdec" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # CM256cc
 cd cm256cc; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/cm256cc"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/cm256cc" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # LibDAB
 cd dab-cmdline/library; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libdab"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libdab" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../../..
 
 # MBElib
 cd mbelib; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/mbelib"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/mbelib" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # SerialDV
 cd serialDV; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/serialdv"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/serialdv" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -49,26 +57,30 @@ cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/dsdcc" \
     -DLIBMBE_INCLUDE_DIR=${INSTALL_PREFIX}/mbelib/include \
     -DLIBMBE_LIBRARY=${INSTALL_PREFIX}/mbelib/lib/libmbe.dylib \
     -DLIBSERIALDV_INCLUDE_DIR=${INSTALL_PREFIX}/serialdv/include/serialdv \
-    -DLIBSERIALDV_LIBRARY=${INSTALL_PREFIX}/serialdv/lib/libserialdv.dylib ..
+    -DLIBSERIALDV_LIBRARY=${INSTALL_PREFIX}/serialdv/lib/libserialdv.dylib \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # Codec2/FreeDV
 #brew install speexdsp libsamplerate codec2
 #cd codec2; mkdir -p build; cd build
-#cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/codec2"  ..
+#cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/codec2" \
+#    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 #make -j $NPROC install
 #cd ../..
 
 # SGP4
 cd sgp4; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/sgp4"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/sgp4" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # LibSigMF
 cd libsigmf; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libsigmf"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libsigmf" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -76,20 +88,23 @@ cd ../hardware
 
 # Airspy
 cd libairspy; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libairspy"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libairspy" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # SDRplay RSP1
 cd libmirisdr; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libmirisdr"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libmirisdr" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # RTL-SDR
 cd librtlsdr; mkdir -p build; cd build
 cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/librtlsdr" \
-    -DDETACH_KERNEL_DRIVER=ON ..
+    -DDETACH_KERNEL_DRIVER=ON \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -98,13 +113,15 @@ brew install libtecla pandoc
 cd libiio; mkdir -p build; cd build
 cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libiio" \
     -DPANDOC_EXECUTABLE=/usr/local/bin/pandoc \
-    -DINSTALL_UDEV_RULE=OFF ..
+    -DINSTALL_UDEV_RULE=OFF \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # BladeRF all versions
 cd libbladeRF/host; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libbladeRF"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libbladeRF" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../../..
 
@@ -117,13 +134,15 @@ cd ../../..
 
 # LimeSDR
 cd LimeSuite; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/LimeSuite"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/LimeSuite" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # AirspyHF
 cd libairspyhf; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libairspyhf" ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/libairspyhf" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -139,7 +158,8 @@ pip3 install mako docutils
 cd usrp/host; mkdir -p build; cd build
 cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/uhd" \
     -DPYTHON_EXECUTABLE=/usr/local/bin/python3 \
-    -DRUNTIME_PYTHON_EXECUTABLE=/usr/local/bin/python3 ..
+    -DRUNTIME_PYTHON_EXECUTABLE=/usr/local/bin/python3 \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..    
 make -j $NPROC
 make install
 "${INSTALL_PREFIX}/uhd/lib/uhd/utils/uhd_images_downloader.py"
@@ -162,14 +182,16 @@ cd ../../..
 #    -DFORCE_ARCH=x86_64 \
 #    -DLIBUSB_1_INCLUDE_DIRS=/usr/local/include \
 #    -DLIBUSB_1_LIBRARIES=/usr/local/lib/libusb.dylib \
-#    -DINSTALL_UDEV_RULES=OFF ..
+#    -DINSTALL_UDEV_RULES=OFF \
+#    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 #make -j $NPROC
 #make install
 #cd ../../..
 
 # Soapy SDR
 cd SoapySDR; mkdir -p build; cd build
-cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/SoapySDR"  ..
+cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/SoapySDR" \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -179,7 +201,8 @@ cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/SoapySDR" \
     -DRTLSDR_INCLUDE_DIR=${INSTALL_PREFIX}/librtlsdr/include \
     -DRTLSDR_LIBRARY=${INSTALL_PREFIX}/librtlsdr/lib/librtlsdr.dylib \
     -DSOAPY_SDR_INCLUDE_DIR=${INSTALL_PREFIX}/SoapySDR/include \
-    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib ..
+    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
@@ -189,14 +212,16 @@ cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/SoapySDR" \
     -DLIBHACKRF_INCLUDE_DIR=${INSTALL_PREFIX}/libhackrf/include/libhackrf \
     -DLIBHACKRF_LIBRARY=${INSTALL_PREFIX}/libhackrf/lib/libhackrf.dylib \
     -DSOAPY_SDR_INCLUDE_DIR=${INSTALL_PREFIX}/SoapySDR/include \
-    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib ..
+    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
 # LimeSDR
 cd LimeSuite/build
 cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/LimeSuite" \
-    -DCMAKE_PREFIX_PATH=${INSTALL_PREFIX}/SoapySDR ..
+    -DCMAKE_PREFIX_PATH=${INSTALL_PREFIX}/SoapySDR \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cp ${INSTALL_PREFIX}/LimeSuite/lib/SoapySDR/modules0.7/libLMS7Support.so \
     ${INSTALL_PREFIX}/SoapySDR/lib/SoapySDR/modules0.7/libLMS7Support.dylib
@@ -206,7 +231,8 @@ cd ../..
 cd SoapyRemote; mkdir -p build; cd build
 cmake -Wno-dev -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}/SoapySDR" \
     -DSOAPY_SDR_INCLUDE_DIR=${INSTALL_PREFIX}/SoapySDR/include \
-    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib ..
+    -DSOAPY_SDR_LIBRARY=${INSTALL_PREFIX}/SoapySDR/lib/libSoapySDR.dylib \
+    -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ..
 make -j $NPROC install
 cd ../..
 
